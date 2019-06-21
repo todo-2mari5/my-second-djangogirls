@@ -5,7 +5,12 @@
     <title>semal</title>
   </head>
   <body>
-    <h1>nekonyann</h1>
-    <p>nekonekonyannnyann</p>
+    {% for post in posts %}
+      <div class="">
+        <p>published:{{ post.published_date }}</p>
+        <h1><a  href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreakbr }}</p>
+      </div>
+    {% endfor %}
   </body>
 </html>
